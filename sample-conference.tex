@@ -1,0 +1,93 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%   OPTIONS: major/minor, conference/journal, anonymous
+%   DEFAULT: major, journal
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\documentclass[minor, conference, anonymous]{responseletter}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%   FILL IN YOUR MANUSCRIPT DETAILS HERE
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\manuscriptid{CONFERENCE-XXX}
+\papertitle{The Name of the Title is Hope}
+\authornames{Tom and Jerry}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%   CUSTOMIZE THE INTRODUCTORY LETTER (OPTIONAL)
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% \letterbody{
+% We are grateful for the insightful feedback on our manuscript. We have revised the paper extensively based on the suggestions and believe it is now much stronger. Our detailed responses are provided below.
+
+% Thank you for your consideration.
+% }
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{document}
+
+\maketitle
+
+{\color{red}
+
+Use \texttt{\textbackslash{manuscriptid}\string{<id>\string}} to set the Manuscript ID.
+
+Use \texttt{\textbackslash{papertitle}\string{<title>\string}} to set the title of the paper.
+
+Use \texttt{\textbackslash{authornames}\string{<names>\string}} to set the author names. This is optional when using the \texttt{anonymous} option in \texttt{\textbackslash{documentclass}}. Note: For double-anonymous venues, do not forget to use the \texttt{anonymous} option.
+
+Use \texttt{\textbackslash{letterbody\string{<body>\string}}} to customize the introductory letter. This is optional.
+
+Use \texttt{\textbackslash{maketitle}} right after \texttt{\textbackslash{begin}\string{document\string}}.
+
+}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%   RESPONSES TO REVIEWERS
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+% --- META-REVIEW SECTION ---
+\metareview
+
+\meta[To create the Meta-Review section, use
+
+\texttt{\textbackslash{metareview}}
+
+To create the Meta-Review block and its responses, use 
+
+\texttt{\textbackslash{}meta\string[<comments>\string]\string{<responses>\string}}
+
+]{This is the response to the Associate Editors' Comments.
+}
+
+% --- REVIEWER SECTIONS ---
+\reviewer
+
+\response[To create the Reviewer sections:
+
+Use \texttt{\textbackslash{reviewer}} for automatic numbering (Reviewer \#1, Reviewer \#2, etc.).
+
+Use \texttt{\textbackslash{reviewer}\string[<ID>\string]} for a custom ID.
+
+For example, for submissions to journals like TOSEM, you can use \texttt{\textbackslash{reviewer}}, while for submissions to conferences hosted on HotCRP, you can use \texttt{\textbackslash{reviewer}\string[\textbackslash{\#}123A\string]}.
+
+]{To create a comment block and its response, use
+
+\texttt{\textbackslash{}response\string[<comments>\string]\string{<responses>\string}}
+
+The responses are always numbered sequentially. To label a response, use \texttt{\textbackslash{label\string{\string}}} either at the end of the comment or at the end of the response. \label{r1:c1}}
+
+\response[This comment consists of the following points:
+\begin{enumerate}
+    \item This is the first point.
+    \item This is the second point.
+\end{enumerate}
+]{This is a response to the second comment from Reviewer 1.
+    \begin{itemize}
+        \item The comments and responses support \texttt{enumerate} and \texttt{itemize} environments.
+    \end{itemize}
+}
+
+\reviewer[\#123B]
+
+\response[This is the comment from Reviewer \#123B.]{Here, we reference \ref{r1:c1}. To make a reference to the response of a comment, use \texttt{\textbackslash{ref}\string{\string}}.
+}
+
+\end{document}
