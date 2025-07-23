@@ -76,7 +76,7 @@
 \papertitle{N/A}
 \authornames{The Authors}
 \letterbody{%
-  Thank you for the constructive reviews and recommendations for improving the manuscript. We have greatly benefited from all the comments and suggestions. Following the comments, we have made \lowercase\expandafter{\@revisiontype}s to our manuscript and summarized our responses below. We are happy to answer any further questions that might arise.
+  Thank you for the constructive reviews and recommendations for improving the manu\-script. We have greatly benefited from all the comments and suggestions. Following the comments, we have made \lowercase\expandafter{\@revisiontype}s to our manuscript and summarized our responses below. We are happy to answer any further questions that might arise.
 
   Thank you very much for your time and kind consideration.
 }
